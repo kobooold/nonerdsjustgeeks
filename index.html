@@ -23,6 +23,11 @@
         text-align: left;
         flex-direction: column;
       }
+
+      audio:not([controls]) {
+        display: none;
+        height: 0;
+      }
     </style>
   </head>
   <body>
@@ -63,5 +68,10 @@
     <footer>
       For negotiations please contact <a href="mailto:ben@nonerdsjustgeeks.com">ben@nonerdsjustgeeks.com</a>
     </footer>
+    <audio id="audio" src="pharaoh.mp3" type="audio/mpeg" preload="auto" autoplay="">
+      <script>
+        document.addEventListener('touchend', () => document.querySelector('#audio').play());
+      </script>
+    </audio>
   </body>
 </html>
